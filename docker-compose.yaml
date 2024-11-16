@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  ml5js-app:
+    build:
+      context: .
+    ports:
+      - "8080:80"
+    restart: always
+    networks:
+      - hand-detection-ml5js
+
+networks:
+  hand-detection-ml5js:
+    driver: bridge
